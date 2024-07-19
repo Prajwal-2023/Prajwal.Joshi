@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Raleway;
+  
+}
+body::-webkit-scrollbar{
+  display: none;
+}
+
+.Main-project-wrapper {
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* Adjust the height  fixed height */
+  height: 400px;
+  /* overflow-y VERTICAL SCROLL*/
+  overflow-y: auto;
+  padding: 5px;
+  grid-gap: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+
+.Main-project-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.project-display-div {
+  border: 1px solid black;
+  width: 100%;
+  height: 390px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+
+}
+
+.project-display-div .project-title {
+  /* border:1px solid rgb(177, 37, 37); */
+  width: 100%;
+  height: 10%;
+  /* background-color: #c4ebec; */
+  border-bottom: 1px solid black;
+  margin-bottom: 3px;
+ 
+}
+
+/* TEXT ANIMATION PROJECT-1 */
+.project-title #p1-title{
+  background:linear-gradient(-25deg,#140f0f,grey,#35353592,rgb(45, 45, 255),#a5a5ff,#353535,grey,#140f0f);
+  background-clip: text;
+  background-size: 200%;
+  -webkit-background-clip: text;
+  color:transparent;
+  animation: anime-grad 2.5s linear infinite;
+}
+
+/* TEXT ANIMATION PROJECT-2 */
+.project-title #p2-title{
+  background:linear-gradient(-25deg, orange,violet,orangered,violet,brown,violet,orangered,violet,orange);
+  background-clip: text;
+  background-size: 200%;
+  -webkit-background-clip: text;
+  color:transparent;
+  animation: anime-grad 2.5s linear infinite;
+}
+
+/* TEXT ANIMATION PROJECT-3*/
+.project-title #p3-title{
+  background:linear-gradient(-25deg,#6d1c1c,black,red,#3b3b3b,#140f0f,#3b3b3b,red,black,#6d1c1c);
+  background-clip: text;
+  background-size: 200%;
+  -webkit-background-clip: text;
+  color:transparent;
+  animation: anime-grad 2.5s linear infinite;
+}
+
+@keyframes anime-grad {
+  to{
+    background-position:200%;
+  }  
+
+}
+
+/* TEXT ANIMATION END */
+
+.project-display-div .a-project {
+  /* border:1px solid rgb(18, 90, 245); */
+  width: 100%;
+  height: 80%;
+}
+
+.a-project img {
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+  cursor: pointer;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.a-project:hover img {
+  width: 80%;
+  height: 100%;
+  cursor: pointer;
+  object-position: top;
+  border-radius: 5px;
+  filter: drop-shadow(1px 1px 10px);
+  animation: project-preview 1s infinite;
+}
+
+@keyframes project-preview {
+  0% {
+    /* transform: rotate(0deg); */
+    transform: translateX(0px)  scale(1.3);
+  }
+
+  20% {
+    /* transform: rotate(10deg); */
+    transform: translateX(-1px) scale(1.3);
+  }
+
+  40% {
+    /* transform: rotate(0deg); */
+    transform: translateX(1px)  scale(1.3);
+  }
+
+  60% {
+    /* transform: rotate(-10deg); */
+    transform: translateX(-1px) scale(1.3);
+  }
+
+  80% {
+    /* transform: rotate(10deg); */
+    transform: translateX(1px) scale(1.3);
+  }
+
+  100% {
+    /* transform: rotate(0deg); */
+    transform: translateX(0px)scale(1.3);
+  }
+
+}
+
+
+
+
+.footer-div span {
+  opacity: 0;
+}
+
+.footer-div {
+  background-color: #c4ebec;
+  cursor: pointer;
+  margin-top: 3px;
+
+}
+
+.footer-div:hover span {
+  opacity: 1;
+  color: #fc8803;
+  filter: drop-shadow(1px 1px 100px);
+  cursor: pointer;
+}
+
+
+
+.project-display-div .a-project a {
+  /* border:1px solid rgb(18, 90, 245); */
+  width: 100%;
+  height: 100%;
+}
+
+.project-display-div .footer-div {
+  /* border:1px solid black; */
+  width: 100%;
+  height: 10%;
+  padding-top: 10px;
+  border-top: 1px solid black;
+}
+
+
+/* MEDIA ANIMATION */
+
+@media (max-width:920px) {
+  .Main-project-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Adjust the height  fixed height */
+    height: 400px;
+    /* overflow-y VERTICAL SCROLL*/
+    overflow-y: auto;
+    padding: 5px;
+    grid-gap: 10px;
+    position: relative;
+    z-index: 1;
+  }
+}
+@media (max-width:750px) {
+  .Main-project-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Adjust the height  fixed height */
+    height: 400px;
+    /* overflow-y VERTICAL SCROLL*/
+    overflow-y: auto;
+    padding: 5px;
+    grid-gap: 10px;
+    position: relative;
+    z-index: 1;
+  }
+
+
+  
+.a-project:hover img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  object-position: top;
+  border-radius: 5px;
+  filter: drop-shadow(0px 0px 0px);
+  animation: project-preview 1s infinite;
+}
+
+@keyframes project-preview {
+  to{
+    transform: translateX(0px)  ;
+  }
+}
+
+
+}

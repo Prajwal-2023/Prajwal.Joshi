@@ -7,12 +7,42 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="project.css">
   <title>PRAJWAL FRONTEND</title>
+  
+
+  <style>
+    .main{
+      position: relative;
+      width:100%;
+    }
+    #background-video{
+      position: fixed;
+      top:0;
+      left:0;
+      bottom:0;
+      right:0;
+      z-index:0;
+    }
+
+    .navbar,
+    .About,
+    .footer{
+      background-color: transparent;
+      color:white;
+    }
+    *::selection{
+      color:#399fff;
+    }
+
+  </style>
 </head>
 
 <body>
   <main>
     <!-- MAIN WRAPPER OUTER FULL -->
     <div class="main">
+      <video id="background-video" autoplay muted loop>
+        <source src="VIDEO/fullmoon.mp4">
+      </video>
       <!-- NAVIGATION BAR -->
       <div class="navbar">
         <!-- LEFT SIDE FOR NAME AND LOGO -->

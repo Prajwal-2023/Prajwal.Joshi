@@ -147,8 +147,8 @@ body::-webkit-scrollbar{
 .About a img {
   vertical-align: middle;
 }
-.About a:hover img {
-  transform: rotate(30deg);
+.About a:hover #resume {
+    transform: scale(1);
   /* animation-timing-function: 5s;
   animation-name: pdf;
   animation-iteration-count: infinite; */
@@ -157,19 +157,19 @@ body::-webkit-scrollbar{
 /* KEYFRAMES FOR PDF ICON CV */
 @keyframes pdf {
   10%{
-    transform: rotate(30deg);
+    transform: scale(1);
   }
   40%{
-    transform: rotate(-30deg);
+    transform: scale(1.2);
   }
   60%{
-    transform: rotate(30deg);
+    transform: scale(1);
   }
   80%{
-    transform: rotate(-30deg);
+    transform: scale(1.2);
   }
   100%{
-    transform: rotate(360deg);
+    transform: scale(1);
   }
     
 }

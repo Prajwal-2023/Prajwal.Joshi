@@ -7,7 +7,7 @@
 :root{
   --project-1-theme:linear-gradient(-25deg, #140f0f, grey, #35353592, rgb(45, 45, 255), #a5a5ff, #353535, grey, #140f0f);
   --project-2-theme:linear-gradient(-25deg, orange, violet, orangered, violet, brown, violet, orangered, violet, orange);
-  --project-3-theme:linear-gradient(-25deg, orange, violet, orangered, violet, brown, violet, orangered, violet, orange);
+  --project-3-theme:linear-gradient(-25deg, #6d1c1c, black, red, #3b3b3b, #140f0f, #3b3b3b, red, black, #6d1c1c);
 
 }
 
@@ -68,7 +68,7 @@ body::-webkit-scrollbar {
 
 /* TEXT ANIMATION PROJECT-1 */
 .project-title #p1-title {
-  background: linear-gradient(-25deg, #140f0f, grey, #35353592, rgb(45, 45, 255), #a5a5ff, #353535, grey, #140f0f);
+  background:var(--project-1-theme);
   background-clip: text;
   background-size: 200%;
   -webkit-background-clip: text;
@@ -78,7 +78,7 @@ body::-webkit-scrollbar {
 
 /* TEXT ANIMATION PROJECT-2 */
 .project-title #p2-title {
-  background: linear-gradient(-25deg, orange, violet, orangered, violet, brown, violet, orangered, violet, orange);
+  background:var(--project-2-theme);
   background-clip: text;
   background-size: 200%;
   -webkit-background-clip: text;
@@ -88,7 +88,7 @@ body::-webkit-scrollbar {
 
 /* TEXT ANIMATION PROJECT-3*/
 .project-title #p3-title {
-  background: linear-gradient(-25deg, #6d1c1c, black, red, #3b3b3b, #140f0f, #3b3b3b, red, black, #6d1c1c);
+  background:var(--project-3-theme);
   background-clip: text;
   background-size: 200%;
   -webkit-background-clip: text;
